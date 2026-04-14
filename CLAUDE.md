@@ -38,7 +38,6 @@ These instructions apply to every project I work on. Project-specific
 
 ## Working style
 
-- Keep responses concise. Skip preamble and restatement; answer directly.
 - Prefer editing existing files over creating new ones. Never create docs
   (README, *.md) unless I explicitly ask.
 - Match the conventions of the surrounding code (naming, formatting,
