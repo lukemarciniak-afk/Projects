@@ -18,8 +18,11 @@ Data comes from [Open-Meteo](https://open-meteo.com), which is free and needs no
 
 Double-click **`Start Widget.bat`**.
 
-If nothing happens, open Command Prompt in this folder and run
-`python whistler_widget.py`. Any error message will show up there.
+### If nothing opens
+
+1. Make sure you **extracted the ZIP**. Right-click it → **Extract All**, then open the extracted folder. Double-clicking files while they're still inside the ZIP doesn't work.
+2. Double-click **`Debug Widget.bat`**. It runs the widget with a window open so you can see any error message.
+3. If the widget crashed, it also writes the details to `error_log.txt` in this folder.
 
 ## Start automatically when Windows starts (optional)
 

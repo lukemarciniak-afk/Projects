@@ -12,6 +12,7 @@ Run it:  double-click "Start Widget.bat"  (or:  python whistler_widget.py)
 """
 
 import json
+import os
 import threading
 import tkinter as tk
 import urllib.parse
@@ -282,6 +283,14 @@ class WeatherWidget:
 
 
 if __name__ == "__main__":
-    window = tk.Tk()
-    WeatherWidget(window)
-    window.mainloop()
+    try:
+        window = tk.Tk()
+        WeatherWidget(window)
+        window.mainloop()
+    except Exception:
+        # Save the error next to this file so problems aren't invisible
+        import traceback
+        folder = os.path.dirname(os.path.abspath(__file__))
+        with open(os.path.join(folder, "error_log.txt"), "w") as log:
+            traceback.print_exc(file=log)
+        raise
